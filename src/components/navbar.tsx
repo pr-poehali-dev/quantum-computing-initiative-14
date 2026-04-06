@@ -32,6 +32,9 @@ export function Navbar() {
               <a href="#faq" className="font-geist text-white hover:text-red-500 transition-colors duration-200">
                 Вопросы
               </a>
+              <a href="#register" className="font-geist text-white hover:text-red-500 transition-colors duration-200">
+                Оставить заявку
+              </a>
             </div>
           </div>
 
@@ -80,6 +83,13 @@ export function Navbar() {
                 onClick={() => setIsOpen(false)}
               >
                 Вопросы
+              </a>
+              <a
+                href="#register"
+                className="block px-3 py-2 font-geist text-white hover:text-red-500 transition-colors duration-200"
+                onClick={() => setIsOpen(false)}
+              >
+                Оставить заявку
               </a>
               <div className="px-3 py-2">
                 <a href="https://t.me/+7eoNYNT4wKNmMWUy" target="_blank" rel="noopener noreferrer">
