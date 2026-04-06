@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button"
+import Icon from "@/components/ui/icon"
 
 export function CTASection() {
   return (
@@ -18,6 +19,7 @@ export function CTASection() {
                 size="lg"
                 className="bg-primary text-primary-foreground hover:bg-primary/90 pulse-button text-lg px-8 py-4"
               >
+                <Icon name="Send" size={20} />
                 Начать бесплатно
               </Button>
             </a>
@@ -27,6 +29,7 @@ export function CTASection() {
                 variant="outline"
                 className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-4 bg-transparent"
               >
+                <Icon name="Send" size={20} />
                 Узнать подробнее
               </Button>
             </a>

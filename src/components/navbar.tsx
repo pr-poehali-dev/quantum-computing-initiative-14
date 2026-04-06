@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
+import Icon from "@/components/ui/icon"
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -37,7 +38,10 @@ export function Navbar() {
           {/* CTA Button */}
           <div className="hidden md:block">
             <a href="https://t.me/+7eoNYNT4wKNmMWUy" target="_blank" rel="noopener noreferrer">
-              <Button className="bg-red-500 hover:bg-red-600 text-white font-geist border-0">Начать бесплатно</Button>
+              <Button className="bg-red-500 hover:bg-red-600 text-white font-geist border-0 gap-2">
+                <Icon name="Send" size={16} />
+                Начать бесплатно
+              </Button>
             </a>
           </div>
 
@@ -79,7 +83,8 @@ export function Navbar() {
               </a>
               <div className="px-3 py-2">
                 <a href="https://t.me/+7eoNYNT4wKNmMWUy" target="_blank" rel="noopener noreferrer">
-                  <Button className="w-full bg-red-500 hover:bg-red-600 text-white font-geist border-0">
+                  <Button className="w-full bg-red-500 hover:bg-red-600 text-white font-geist border-0 gap-2">
+                    <Icon name="Send" size={16} />
                     Начать бесплатно
                   </Button>
                 </a>
