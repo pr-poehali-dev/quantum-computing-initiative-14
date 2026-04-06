@@ -3,40 +3,40 @@ import { Badge } from "@/components/ui/badge"
 
 const features = [
   {
-    title: "Адаптивная нейрообработка",
-    description: "Самооптимизирующиеся алгоритмы, которые обучаются на нейронных паттернах и улучшают интерпретацию сигналов.",
-    icon: "brain",
-    badge: "ИИ",
-  },
-  {
-    title: "Медицинская защита",
-    description: "Шифрование по стандартам FDA со сквозной защитой конфиденциальных нейронных данных.",
-    icon: "lock",
-    badge: "Сертификат",
-  },
-  {
-    title: "Интуитивное управление",
-    description: "Естественная трансляция мыслей в действия с откликом менее миллисекунды и точностью 99,7%.",
-    icon: "globe",
-    badge: "Точность",
-  },
-  {
-    title: "Предиктивная калибровка",
-    description: "ML-модели, которые предугадывают намерения пользователя и оптимизируют нейронные пути.",
+    title: "Сигналы в реальном времени",
+    description: "Получай точные арбитражные сигналы с указанием биржи, пары и спреда. Успей раньше рынка.",
     icon: "zap",
-    badge: "Умный",
+    badge: "Live",
   },
   {
-    title: "Биометрическая интеграция",
-    description: "Бесшовная синхронизация с мониторингом жизненных показателей для контроля здоровья.",
+    title: "Защита капитала",
+    description: "Проверенные схемы входа и выхода с минимальными рисками. Торгуй только с подтверждёнными связками.",
+    icon: "lock",
+    badge: "Безопасно",
+  },
+  {
+    title: "Обучение с нуля",
+    description: "Пошаговые инструкции для новичков: от регистрации на бирже до первой прибыли за 7 дней.",
+    icon: "globe",
+    badge: "Новичкам",
+  },
+  {
+    title: "Умный трекер прибыли",
+    description: "Автоматический подсчёт доходности по каждой связке. Знай свою реальную прибыль в любой момент.",
+    icon: "brain",
+    badge: "Аналитика",
+  },
+  {
+    title: "Закрытое сообщество",
+    description: "Опытные трейдеры делятся связками, лайфхаками и стратегиями в закрытом чате каждый день.",
     icon: "link",
-    badge: "Связь",
+    badge: "Сообщество",
   },
   {
-    title: "Поддержка XR",
-    description: "Нативная совместимость с AR/VR-средами для терапевтических и рабочих приложений.",
+    title: "Мультибиржевые связки",
+    description: "Работаем с Binance, Bybit, OKX, Garantex и 20+ другими площадками для максимального охвата.",
     icon: "target",
-    badge: "XR Ready",
+    badge: "20+ бирж",
   },
 ]
 
@@ -45,9 +45,9 @@ export function FeaturesSection() {
     <section className="py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4 font-sans">Возможности нового поколения</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-4 font-sans">Всё для стабильного заработка</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Почувствуйте будущее с технологиями, которые переопределяют возможное
+            Инструменты и знания, которые нужны как новичку, так и опытному трейдеру
           </p>
         </div>
 
@@ -61,12 +61,12 @@ export function FeaturesSection() {
               <CardHeader>
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-3xl">
-                    {feature.icon === "brain" && "&#129504;"}
-                    {feature.icon === "lock" && "&#128274;"}
-                    {feature.icon === "globe" && "&#127760;"}
-                    {feature.icon === "zap" && "&#9889;"}
-                    {feature.icon === "link" && "&#128279;"}
-                    {feature.icon === "target" && "&#127919;"}
+                    {feature.icon === "brain" && "📊"}
+                    {feature.icon === "lock" && "🔒"}
+                    {feature.icon === "globe" && "🎓"}
+                    {feature.icon === "zap" && "⚡"}
+                    {feature.icon === "link" && "💬"}
+                    {feature.icon === "target" && "🎯"}
                   </span>
                   <Badge variant="secondary" className="bg-accent text-accent-foreground">
                     {feature.badge}

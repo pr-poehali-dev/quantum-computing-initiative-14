@@ -3,25 +3,25 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 const testimonials = [
   {
-    name: "Елена Родригес",
-    role: "Директор по нейронауке, Quantum Dynamics",
-    avatar: "/professional-woman-scientist.png",
-    content:
-      "SynapseAI изменил наш подход к нейрореабилитации. Результаты пациентов улучшились на 340% после внедрения.",
-  },
-  {
-    name: "Маркус Уильямс",
-    role: "Руководитель исследований, Stellar Analytics",
+    name: "Алексей Морозов",
+    role: "Новичок → доход 85 000 ₽/мес за 2 месяца",
     avatar: "/cybersecurity-expert-man.jpg",
     content:
-      "Точность и протоколы безопасности не имеют аналогов. Мы значительно ускорили клинические испытания с платформой SynapseAI.",
+      "Пришёл без опыта вообще. За первую неделю разобрался со связками и сделал первые 12 000 рублей. Сейчас второй месяц — стабильно 85 000. Реально работает.",
   },
   {
-    name: "Анна Ковальски",
-    role: "Вице-президент по разработке, Nova Industries",
+    name: "Марина Соколова",
+    role: "Опытный трейдер, доход 320 000 ₽/мес",
     avatar: "/asian-woman-tech-developer.jpg",
     content:
-      "Интеграция прошла безупречно. Адаптивные алгоритмы понимают намерения пользователя лучше любой системы, что мы тестировали.",
+      "До этого торговала на споте и терпела убытки. Арбитраж — это другое: нет угадывания, только математика. Уже 4 месяца стабильно выше 300 тысяч в месяц.",
+  },
+  {
+    name: "Дмитрий Харченко",
+    role: "Фрилансер, совмещает с основной работой",
+    avatar: "/professional-woman-scientist.png",
+    content:
+      "Занимаюсь 2-3 часа в день параллельно с работой. За первый месяц вышел на 45 000 дополнительно. Платформа дала всё: обучение, сигналы и поддержку.",
   },
 ]
 
@@ -30,9 +30,9 @@ export function TestimonialsSection() {
     <section className="py-24 px-6 bg-card">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-card-foreground mb-4 font-sans">Нам доверяют лидеры</h2>
+          <h2 className="text-4xl font-bold text-card-foreground mb-4 font-sans">Реальные результаты участников</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Что говорят лидеры индустрии о нашей революционной технологии
+            Люди с разным опытом уже зарабатывают с помощью P2P арбитража
           </p>
         </div>
 
