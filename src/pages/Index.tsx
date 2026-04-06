@@ -7,6 +7,7 @@ import { SafetySection } from "@/components/safety-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { FAQSection } from "@/components/faq-section"
 import { CTASection } from "@/components/cta-section"
+import { LeadFormSection } from "@/components/lead-form-section"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 
@@ -29,6 +30,7 @@ export default function Index() {
         <section id="faq">
           <FAQSection />
         </section>
+        <LeadFormSection />
         <CTASection />
       </main>
       <Footer />
