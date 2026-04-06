@@ -1,4 +1,5 @@
 import { Github, Twitter, Linkedin, Mail } from "lucide-react"
+import Icon from "@/components/ui/icon"
 
 export function Footer() {
   return (
@@ -14,6 +15,9 @@ export function Footer() {
               Платформа для заработка на P2P арбитраже криптовалют. Обучение, сигналы и сообщество для новичков и профессионалов.
             </p>
             <div className="flex space-x-4">
+              <a href="https://t.me/+7eoNYNT4wKNmMWUy" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-500 transition-colors duration-200">
+                <Icon name="Send" size={20} />
+              </a>
               <a href="#" className="text-gray-400 hover:text-red-500 transition-colors duration-200">
                 <Twitter size={20} />
               </a>
