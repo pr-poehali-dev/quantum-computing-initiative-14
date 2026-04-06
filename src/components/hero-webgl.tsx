@@ -195,6 +195,26 @@ export const Hero3DWebGL = () => {
             </Button>
           </a>
         </div>
+
+        {/* Stats */}
+        <div
+          className={`mt-12 flex flex-col sm:flex-row gap-8 normal-case ${subtitleVisible ? "fade-in-subtitle" : ""}`}
+          style={{
+            animationDelay: `${titleWords.length * 0.13 + 0.8 + subtitleDelay}s`,
+            opacity: subtitleVisible ? undefined : 0,
+          }}
+        >
+          {[
+            { value: "2 400+", label: "участников" },
+            { value: "3–8%", label: "с каждого оборота" },
+            { value: "от 7 дней", label: "до первой прибыли" },
+          ].map((stat, i) => (
+            <div key={i} className="text-center">
+              <div className="text-2xl md:text-3xl font-extrabold text-red-500 font-orbitron">{stat.value}</div>
+              <div className="text-xs md:text-sm text-gray-400 mt-1 font-normal">{stat.label}</div>
+            </div>
+          ))}
+        </div>
       </div>
 
       <Canvas
