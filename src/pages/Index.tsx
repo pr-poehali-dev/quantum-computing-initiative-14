@@ -7,6 +7,8 @@ import { TestimonialsSection } from "@/components/testimonials-section"
 import { FAQSection } from "@/components/faq-section"
 import { CTASection } from "@/components/cta-section"
 import { LeadFormSection } from "@/components/lead-form-section"
+import { SafetySection } from "@/components/safety-section"
+import { CalculatorSection } from "@/components/calculator-section"
 import { Navbar } from "@/components/navbar"
 import { Footer } from "@/components/footer"
 
@@ -19,7 +21,9 @@ export default function Index() {
         <StatsSection />
         <FeaturesSection />
         <ComparisonSection />
+        <CalculatorSection />
         <ApplicationsTimeline />
+        <SafetySection />
         <TestimonialsSection />
         <section id="faq">
           <FAQSection />
