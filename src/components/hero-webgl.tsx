@@ -116,8 +116,8 @@ const Scene = () => {
 }
 
 export const Hero3DWebGL = () => {
-  const titleWords = "P2P Арбитраж".split(" ")
-  const subtitle = "Зарабатывай на разнице курсов. С нуля до стабильного дохода."
+  const titleWords = "P2P \u0410\u0440\u0431\u0438\u0442\u0440\u0430\u0436".split(" ")
+  const subtitle = "\u0417\u0430\u0440\u0430\u0431\u0430\u0442\u044b\u0432\u0430\u0439 \u043d\u0430 \u0440\u0430\u0437\u043d\u0438\u0446\u0435 \u043a\u0443\u0440\u0441\u043e\u0432. \u0421 \u043d\u0443\u043b\u044f \u0434\u043e \u0441\u0442\u0430\u0431\u0438\u043b\u044c\u043d\u043e\u0433\u043e \u0434\u043e\u0445\u043e\u0434\u0430."
   const [visibleWords, setVisibleWords] = useState(0)
   const [subtitleVisible, setSubtitleVisible] = useState(false)
   const [delays, setDelays] = useState<number[]>([])
@@ -149,11 +149,11 @@ export const Hero3DWebGL = () => {
 
       <div className="h-screen uppercase items-center w-full absolute z-[60] px-10 flex justify-center flex-col" style={{ pointerEvents: 'none' }}>
         <div className="text-3xl md:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold font-orbitron">
-          <div className="flex space-x-2 lg:space-x-6 overflow-hidden text-white">
+          <div className="flex space-x-2 lg:space-x-6 overflow-hidden">
             {titleWords.map((word, index) => (
               <div
                 key={index}
-                className={index < visibleWords ? "fade-in" : ""}
+                className={`gradient-text ${index < visibleWords ? "fade-in" : ""}`}
                 style={{
                   animationDelay: `${index * 0.13 + (delays[index] || 0)}s`,
                   opacity: index < visibleWords ? undefined : 0,
@@ -164,9 +164,9 @@ export const Hero3DWebGL = () => {
             ))}
           </div>
         </div>
-        <div className="text-xs md:text-xl xl:text-2xl 2xl:text-3xl mt-2 overflow-hidden text-white font-bold max-w-4xl mx-auto text-center px-4">
+        <div className="text-sm md:text-xl xl:text-2xl 2xl:text-3xl mt-3 overflow-hidden text-white/90 font-bold max-w-4xl mx-auto text-center px-4 tracking-wide">
           <div
-            className={subtitleVisible ? "fade-in-subtitle" : ""}
+            className={`font-geist ${subtitleVisible ? "fade-in-subtitle" : ""}`}
             style={{
               animationDelay: `${titleWords.length * 0.13 + 0.2 + subtitleDelay}s`,
               opacity: subtitleVisible ? undefined : 0,
@@ -184,36 +184,57 @@ export const Hero3DWebGL = () => {
           }}
         >
           <a href="#register">
-            <Button size="lg" className="bg-red-500 hover:bg-red-600 text-white text-lg px-8 py-4 gap-2 font-semibold">
+            <Button size="lg" className="bg-red-500 hover:bg-red-600 text-white font-geist text-lg px-8 py-4 gap-2 font-semibold border-0 shadow-[0_0_30px_rgba(239,68,68,0.3)] hover:shadow-[0_0_50px_rgba(239,68,68,0.5)] transition-all duration-300">
               <Icon name="Send" size={20} />
               Оставить заявку
             </Button>
           </a>
           <a href="#applications">
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-black text-lg px-8 py-4 bg-transparent">
+            <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 hover:border-white/40 font-geist text-lg px-8 py-4 bg-white/5 backdrop-blur-sm transition-all duration-300">
               Как это работает
             </Button>
           </a>
         </div>
 
-        {/* Stats */}
         <div
-          className={`mt-12 flex flex-col sm:flex-row gap-8 normal-case ${subtitleVisible ? "fade-in-subtitle" : ""}`}
+          className={`mt-12 flex flex-col sm:flex-row gap-4 sm:gap-3 normal-case ${subtitleVisible ? "fade-in-subtitle" : ""}`}
           style={{
             animationDelay: `${titleWords.length * 0.13 + 0.8 + subtitleDelay}s`,
             opacity: subtitleVisible ? undefined : 0,
           }}
         >
           {[
-            { value: "2 400+", label: "участников" },
-            { value: "3–8%", label: "с каждого оборота" },
-            { value: "от 7 дней", label: "до первой прибыли" },
+            { value: "2 400+", label: "\u0443\u0447\u0430\u0441\u0442\u043d\u0438\u043a\u043e\u0432" },
+            { value: "3\u20138%", label: "\u0441 \u043a\u0430\u0436\u0434\u043e\u0433\u043e \u043e\u0431\u043e\u0440\u043e\u0442\u0430" },
+            { value: "\u043e\u0442 7 \u0434\u043d\u0435\u0439", label: "\u0434\u043e \u043f\u0435\u0440\u0432\u043e\u0439 \u043f\u0440\u0438\u0431\u044b\u043b\u0438" },
           ].map((stat, i) => (
-            <div key={i} className="text-center">
-              <div className="text-2xl md:text-3xl font-extrabold text-red-500 font-orbitron">{stat.value}</div>
-              <div className="text-xs md:text-sm text-gray-400 mt-1 font-normal">{stat.label}</div>
+            <div
+              key={i}
+              className="text-center px-5 py-3 rounded-xl bg-white/[0.04] backdrop-blur-md border border-white/[0.08] hover:border-red-500/30 transition-all duration-300"
+              style={{ pointerEvents: 'auto' }}
+            >
+              <div className="text-xl md:text-2xl font-extrabold gradient-text-red font-orbitron">{stat.value}</div>
+              <div className="text-[10px] md:text-xs text-gray-400 mt-0.5 font-geist font-normal">{stat.label}</div>
             </div>
           ))}
+        </div>
+
+        <div
+          className={`mt-10 normal-case ${subtitleVisible ? "fade-in-subtitle" : ""}`}
+          style={{
+            pointerEvents: 'auto',
+            animationDelay: `${titleWords.length * 0.13 + 1.1 + subtitleDelay}s`,
+            opacity: subtitleVisible ? undefined : 0,
+          }}
+        >
+          <a href="#features" className="flex flex-col items-center gap-1 group">
+            <span className="font-geist text-[10px] uppercase tracking-[0.2em] text-gray-500 group-hover:text-gray-400 transition-colors duration-300">
+              Узнать больше
+            </span>
+            <div className="animate-bounce">
+              <Icon name="ChevronDown" size={20} className="text-gray-500 group-hover:text-red-400 transition-colors duration-300" />
+            </div>
+          </a>
         </div>
       </div>
 
@@ -230,8 +251,7 @@ export const Hero3DWebGL = () => {
         <Scene />
       </Canvas>
 
-      {/* Ticker */}
-      <div className="absolute bottom-0 left-0 right-0 z-[70] bg-black/80 border-t border-red-500/20 py-3 overflow-hidden">
+      <div className="absolute bottom-0 left-0 right-0 z-[70] bg-black/80 backdrop-blur-sm border-t border-red-500/20 py-3 overflow-hidden">
         <div className="flex gap-10 animate-[ticker_20s_linear_infinite] whitespace-nowrap">
           {[...Array(2)].map((_, repeat) => (
             ["Binance", "Bybit", "OKX", "Garantex", "Huobi", "KuCoin", "Gate.io", "MEXC", "Kraken", "Bitfinex"].map((exchange, i) => (

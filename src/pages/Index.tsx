@@ -2,6 +2,7 @@ import { Hero3DWebGL as Hero3D } from "@/components/hero-webgl"
 import { FeaturesSection } from "@/components/features-section"
 import { ApplicationsTimeline } from "@/components/applications-timeline"
 import { StatsSection } from "@/components/stats-section"
+import { PartnersSection } from "@/components/partners-section"
 import { ComparisonSection } from "@/components/comparison-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { FAQSection } from "@/components/faq-section"
@@ -19,6 +20,7 @@ export default function Index() {
       <main>
         <Hero3D />
         <StatsSection />
+        <PartnersSection />
         <FeaturesSection />
         <ComparisonSection />
         <CalculatorSection />
