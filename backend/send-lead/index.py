@@ -32,7 +32,7 @@ def handler(event: dict, context) -> dict:
         }
 
     token = os.environ['TELEGRAM_BOT_TOKEN']
-    chat_id = '8591914232'
+    chat_id = '5531632504'
 
     message = (
         f"🔔 *Новая заявка с сайта!*\n\n"
