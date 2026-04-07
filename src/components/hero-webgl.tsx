@@ -229,6 +229,20 @@ export const Hero3DWebGL = () => {
       >
         <Scene />
       </Canvas>
+
+      {/* Ticker */}
+      <div className="absolute bottom-0 left-0 right-0 z-[70] bg-black/80 border-t border-red-500/20 py-3 overflow-hidden">
+        <div className="flex gap-10 animate-[ticker_20s_linear_infinite] whitespace-nowrap">
+          {[...Array(2)].map((_, repeat) => (
+            ["Binance", "Bybit", "OKX", "Garantex", "Huobi", "KuCoin", "Gate.io", "MEXC", "Kraken", "Bitfinex"].map((exchange, i) => (
+              <span key={`${repeat}-${i}`} className="inline-flex items-center gap-2 text-xs text-zinc-400 font-mono">
+                <span className="w-2 h-2 rounded-full bg-red-500 inline-block animate-pulse"></span>
+                {exchange}
+              </span>
+            ))
+          ))}
+        </div>
+      </div>
     </div>
   )
 }
